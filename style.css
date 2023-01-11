@@ -10,7 +10,7 @@ body{
 
 .section-1{
     margin: 0 auto;
-    padding: 20px;
+    padding:20px 10px 60px 10px;
     background: black;
 
 }
@@ -58,6 +58,12 @@ body{
     font-size: 50px;
     line-height: 70px;
 }
+.txt-02{
+    margin: 0 auto;
+    animation: myAnim-01 4s linear 0s infinite normal none;
+    color: red;
+    font-size: 42px;
+}
 
 .section-2{
     margin: 0 auto;
@@ -85,6 +91,7 @@ body{
 
 
 .bg-3{
+    margin-bottom: 20px;
     margin: 0 auto;
     max-width: 1140px;
     text-size-adjust: auto;
@@ -97,6 +104,8 @@ body{
     padding-top: 5px;
     border: dashed 5px rgb(117, 116, 116);
 }
+
+
 
 /*  */
 
@@ -136,11 +145,22 @@ body{
     font-size: 48px;
 }
 
+
 .bg-5{
+    margin-bottom: 20px !important;
     text-align: center;
     background: #E5FF99;
+    color: #B30000 !important;
     padding: 10px;
     margin: 0 auto;
+}
+.bg-5 p{
+    color: black;
+}
+.bg-5 h2{
+    color: #B30000 !important;
+    margin: 0;
+    padding: 5px;
 }
 
 
@@ -178,19 +198,17 @@ body{
 
 }
 
+.section-5{
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
 /* Accordient  */
 
 .heading-02{
     font-size: 26px;
 }
 
-.headline-03 p{
-    font-size: 20px;
-    color: red;
-}
-.headline-03 .btn-2{
-    margin: 0;
-}
 
 
 .section-6{
@@ -211,27 +229,119 @@ body{
     
 }
 .btn-2{
+    animation: myAnim-04 2s ease 0s infinite normal forwards;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     background: #770808;
     padding: 10px 40px;
     border: solid 2px white;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
 }
 
 .headline-03 p{
-    padding-top: 20px;
+    margin-top: 40px;
     margin: 0 auto;
 }
 
+.txt-01{
+    font-size: 20px;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    background: red;
+    max-width: fit-content;
+    padding: 20px;
+    
+}
+.btn-4{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    background: black;
+    padding: 10px 40px;
+    border: solid 10px red;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.faq h2{
+    font-size: 32px
+}
+
+/* Accordient  */
+.accordion {
+    max-width: 700px;
+    margin: 0 auto;
+    color: black;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .accordion .container-a {
+    position: relative;
+  }
+    
+  .container-a .label {
+    text-align: start;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 0;
+    font-size: 25px;
+    color: #0300A1;
+    cursor: pointer;
+  }
+
+  .accordion .label::before {
+    content: '+';
+    font-weight: 600;
+    color: #0300A1;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    font-size: 25px;
+    transform: translateY(-50%);
+  }
+  
+  /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+  
+  .accordion .content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    max-width: 650px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .accordion .content ul li{
+    list-style: none;
+  }
+  
+  .accordion .container-a.active .content {
+    height: auto;
+  }
+  .accordion .container-a.active .label{
+    color: red;
+  }
+  
+  
+  .accordion .container-a.active .label::before {
+    content: '-';
+    font-size: 25px;
+    color: red;
+  }
+  
+
 
 /* Responsive */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 520px) {
     .bg-1 h1{
         font-size: 36px;
     }
@@ -246,7 +356,8 @@ body{
         font-size: larger;
     }
     .bg-4{
-        font-size: large;
+        font-size: 18px;
+        font-weight: 600;
         padding: 3px;
     }
 
@@ -264,7 +375,15 @@ body{
     }
 
     .bg-7{
-        display: block;
+        display: flex;
+    }
+
+    .btn-2{
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+    .btn-4{
+        padding: 8px 20px;
     }
 
     /* Text 000 */
@@ -274,7 +393,7 @@ body{
     }
 
     .p-1{
-        font-size: 28px;
+        font-size: 22px;
     }
     .p-2{
         font-size: 20px;
@@ -283,20 +402,70 @@ body{
         font-size: 18px;
     }
     .p-4{
-        font-size: 24px;
+        font-size: 15px;
     }
     .p-5{
+        font-size: 14px;
+    }
+    .bg-5 p{
+        font-size: 14px;
+    }
+
+
+    .txt-01{
+        font-size: 16px;
+        padding: 5px;
+    }
+    .txt-02{
+        font-size: 28px;
+    }
+
+    .btn-4{
+        font-size: 20px;
+    }
+
+    .faq h2{
+        font-size: 20px
+    }
+
+    .container-a .label{
+        font-size: 15px;
+    }
+    .accordion .content{
         font-size: 14px;
     }
     
 }
 
-@media only screen and (max-width: 620px) {
-
-
-
+@media only screen and (max-width: 720px) {
+    .hr-1{
+        margin:  40px;
+    }
+    .hedline-3{
+        font-size: 40px;
+    }
+    .f-1{
+        display: block;
+        padding: 20px;
+    }
+    .left , .right{
+        width: 100%;
+        font-size: 18px;
+    }
+    .bg-4{
+        font-size: 32px;
+        padding: 6px;
+    }
+    .p-1{
+        font-size: 32px;
+    }
+    .container-a .label{
+        font-size: 20px;
+    }
 
 }
+
+
 
 
 
@@ -408,6 +577,34 @@ body{
 
 	90% {
 		transform: rotate(2deg);
+	}
+}
+
+@keyframes myAnim-04 {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
 	}
 }
 
